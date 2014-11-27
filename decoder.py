@@ -1,52 +1,42 @@
 # EEC 688 Project
 # CAESAR CIPHER CHALLENGE
-# SON PHAN (2367854)
+# Fill in your name (id)
 #
-# Decoder: 
+# Decoder:
 # - Prompt for cipher text and key (k value)
-# - Decode it and output the plain message  
-#
-# Help:
-# http://www.stealthcopter.com/blog/2009/12/python-cryptograph-using-maketrans-for-substitution-and-full-ciphers/
-# http://www.diveintopython.net/native_data_types/lists.html
-
+# - Decode it and output the plain message
 
 from string import maketrans
 
 # SETUP VARIABLES
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-again_ms = ""
+alphabet = "what are the alphabets? (abcd...)"
 
 # CAESAR FUNCTIONS
 def translator(text, intab, outtab):
+    # see tutorial for maketrans() function here: http://www.tutorialspoint.com/python/string_maketrans.htm
     trantab = maketrans(intab, outtab)
     return text.translate(trantab)
 
-def caesar_encode(plaintext, k, letters):
-    subs = letters[k:]+letters[:k]      #substituted letters
-    return translator(plaintext, letters, subs)
-
 def caesar_decode(ciphertext, k, letters):
-    subs = letters[-k:]+letters[:-k]    #substituted letters
+    subs = #fill in the blank here for exercise 2
+    #see *hints* in lab note and this also helps: http://www.diveintopython.net/native_data_types/lists.html
     return translator(ciphertext, letters, subs)
 
 # MAIN
 print "CAESAR CIPHER CHALLENGE (English)"
 print "--- Decoder ---"
 
-while (again_ms != "y"):
-    print 
-    # GET USER INPUT   
-    cipher_ms   = raw_input("Input your cipher (ignore case & non-alphabet chars): ").lower()
-    input_key   = int(raw_input("Shifted how many letters (key)? k = "))
-    # DECODE
-    plain_ms   = caesar_decode(cipher_ms, input_key, alphabet)    
-    # OUTPUT
-    print
-    print "RESULTS"
-    print "Ciphertext:", cipher_ms
-    print "Plaintext:", plain_ms
-    print
-    print
-    # EXIT?   
-    again_ms    = raw_input("Exit? ('y' to exit) ").lower()
+print
+# GET USER INPUT
+cipher_ms   = #fill in the blank here for exercise 2
+input_key   = #fill in the blank here for exercise 2
+# DECODE
+#correct this function call below for exercise 2
+plain_ms   = #caesar_decode(cipher ms variable, input key variable, alphabet variable)
+# OUTPUT
+print
+print "RESULTS"
+print "Ciphertext:", cipher_ms
+print "Plaintext:", plain_ms
+print
+print
